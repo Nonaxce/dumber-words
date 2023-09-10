@@ -1,0 +1,38 @@
+body{
+    display:flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+#main-content{
+    font-size: 16px;
+}
+textarea{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    margin:0.3rem;
+}
+button{
+    margin-left:0.3rem;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#text-input{
+    font-size: 16px;
+    width: 30vw;
+    min-width: 380px;
+    
+}
+#text-input:focus{
+    outline:none;
+}
+#text-output{
+    font-size: 16px;
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+    width: 30vw;
+    margin:0.3rem;
+    min-width: 380px;
+}
+p{
+    font-style: italic;
+}
