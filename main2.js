@@ -1,8 +1,21 @@
 let normalWordInput = document.querySelector('#text-input');
 let stupidWordOutput = document.querySelector('#text-output');
+// ENTER
 let confirmButton = document.querySelector('#confirm-button');
+// CLEAR TEXT BUTTON
 let clearInputButton = document.querySelector('#clear-input-box-button');
 let clearOutputButton = document.querySelector('#clear-output-box-button');
+// COPY BUTTON
+let copyOutputButton = document.querySelector('#copy-output-box-button');
+
+
+
+// Clear All when refreshed or revisited
+function clearAll() {
+    stupidWordOutput.value = "";
+    normalWordInput.value = "";
+};
+
 
 // Confirm Button
 let normalWord = "";
@@ -19,15 +32,32 @@ confirmButton.addEventListener('click', () => {
     }
     
 });
-
+// Clear Button for the input text
 clearInputButton.addEventListener('click', () => {
     normalWordInput.value = "";
 
 });
+// Clear Button for the output box
 clearOutputButton.addEventListener('click', () => {
     stupidWordOutput.value = "";
 
 });
+// Copy Button for the output box
+copyOutputButton.addEventListener('click', () => {
+    
+    let textToCopy = document.getElementById('text-output');
+    textToCopy.select();
+    textToCopy.setSelectionRange(0, 99999);
+    // a
+    navigator.clipboard.writeText(textToCopy.value);
+    if (!textToCopy.value) {
+        alert('You copied nothing!');
+    } else {
+        alert('Copied to clipboard!');
+    }
+
+});
+
 
 
 // Function that randomizes the chances of ones char in string being capitalize
@@ -36,18 +66,17 @@ let control = "";
 function stupifierOfWords(inputword) {
 
     outputword = "";
-    // Nested for loop with Math.random() 
-    for(char1 = 0; char1 < inputword.length; char1++) {
-        for(char2 = 0; char2 < inputword.length; char2++) {
-            control = Math.random()
-            if (control < 0.5) {
-                outputword += inputword[char2].toLowerCase();
-            } else {
-                outputword += inputword[char2].toUpperCase();
-            }
+    // for loop with Math.random() 
+    for(char2 = 0; char2 < inputword.length; char2++) {
+        control = Math.random()
+        if (control < 0.5) {
+            outputword += inputword[char2].toLowerCase();
+        } else {
+            outputword += inputword[char2].toUpperCase();
         }
-        return outputword;
     }
+    return outputword;
+    
     
 }
 
