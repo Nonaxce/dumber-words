@@ -6,21 +6,39 @@
     <link rel="stylesheet" href="style.css">
     <title>Word Stupifier</title>
 </head>
-<body>
+<body onload="clearAll()">
     <main id="main-content">
         <h1>Dumber Words</h1>
-        <p>Input</p>
-        <textarea placeholder="Enter your text here" id="text-input" cols="30" rows="10"></textarea>
+        <hr>
+        <p style="max-width: 31ch">A simple javascript website that makes your text look random</p>
+        <p style="max-width: 31ch">Like this:</p>
+        <p style="max-width: 31ch">Dumber Words => dUMBer wORds</p>
+        <p>Current: V1.0 Next: Add more randomness</p>
         <br>
-        <button id="confirm-button">Enter</button>
-        <button id="clear-input-box-button">Clear</button>
+        <!--Text Input Area-->
+        <textarea placeholder="Enter your text here" id="text-input" cols="30" rows="10"></textarea>
+            <br>
+            <div class="input-textarea-buttons">
+                <button id="confirm-button">Enter</button>
+                <button id="clear-input-box-button" class="clear-button">Clear</button>
+            </div>
+            
         <p>Output</p>
-        <textarea id="text-output" cols="30" rows="10"></textarea><br>
-        <button id="clear-output-box-button">Clear</button>
+        <!--Text Output Area-->
+        <textarea value="" id="text-output" cols="30" rows="10"></textarea>
+            <br>
+            <div class="output-textarea-buttons">
+                <button title="Copy to clipboard" id="copy-output-box-button" class="copy-button">Copy</button>
+                <button id="clear-output-box-button" class="clear-button">Clear</button>
+            </div>
+        <br>
+        <p>Dummy Project By Nonaxce</p>
+            
     </main>
     
 
     <!--<script src="main.js"></script>-->
     <script src="main2.js"></script>
 </body>
+</html>
 </html>
