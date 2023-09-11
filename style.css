@@ -3,36 +3,51 @@ body{
     justify-content: center;
     font-family: 'Courier New', Courier, monospace;
 }
+
 #main-content{
     font-size: 16px;
 }
+
 textarea{
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
     margin:0.3rem;
 }
+
 button{
     margin-left:0.3rem;
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
+    height:2.6rem;
+    width: 5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px black;
+    margin-top: 0.5rem;
 }
-#text-input{
-    font-size: 16px;
-    width: 30vw;
-    min-width: 380px;
+button:hover{
+    box-shadow: 0px 0px 0px black;
+}
+
+.clear-button{
+    background-color: rgb(214, 100, 100);
     
 }
-#text-input:focus{
-    outline:none;
+
+.clear-button:active{
+    background-color: rgb(178, 128, 128);
+    
 }
-#text-output{
-    font-size: 16px;
+
+
+#text-output, #text-input{
+    font-size: 18px;
     font-style: normal;
     font-family: 'Courier New', Courier, monospace;
-    width: 30vw;
+    width: 25vw;
     margin:0.3rem;
-    min-width: 380px;
-}
-p{
-    font-style: italic;
+    min-width: 320px;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 0.2rem;
 }
